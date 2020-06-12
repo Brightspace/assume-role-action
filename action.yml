@@ -1,0 +1,11 @@
+name: 'Assume Role credentials'
+description: 'Invokes stsAssumeRole and stores the AWS IAM crednetials in environment variables for follow-up steps'
+inputs:
+  role-arn:
+    description: 'The ARN for an IAM role'
+    required: true
+runs:
+  using: docker
+  image: Dockerfile
+  args:
+    - ${{ inputs.role-arn }}

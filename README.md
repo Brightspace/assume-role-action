@@ -19,7 +19,7 @@ This could be for a prod/dev account split, or just a larger repo which does a b
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          AWS_SESSION_TOKEN: ${{ secrets.AWS_SESSION_TOKEN }} # optional
+          AWS_SESSION_TOKEN: ${{ secrets.AWS_SESSION_TOKEN }}
       
       - name: Hello, AWS!
         run: aws ec2 describe-instances # runs with the permissions from arn:aws:iam::1234567890:role/my-role

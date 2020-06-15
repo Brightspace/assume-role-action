@@ -1,5 +1,7 @@
 #!/bin/sh
 
+set -euo pipefail
+
 # Set environment variables based on the output of aws sts assume-role
 # https://help.github.com/en/actions/reference/workflow-commands-for-github-actions#setting-an-environment-variable
 

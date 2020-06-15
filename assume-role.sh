@@ -9,7 +9,7 @@ echo "Acquiring temporary tokens for the role ${1}"
 
 aws sts assume-role --role-arn "${1}" --role-session-name github-actions > sts.json
 
-cat env-var-names.json | jq -r 'to_entries | map([
+cat /env-var-names.json | jq -r 'to_entries | map([
   "::add-mask::" + $sts[0].Credentials[.value],
   "::set-env name=" + .key + "::" + $sts[0].Credentials[.value]
 ]) | flatten | .[]' --slurpfile sts sts.json

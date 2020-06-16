@@ -1,5 +1,7 @@
 name: 'Assume Role credentials'
 description: 'Invokes stsAssumeRole and stores the AWS IAM crednetials in environment variables for follow-up steps'
+color: orange
+icon: cloud
 inputs:
   role-arn:
     description: 'The ARN for an IAM role'

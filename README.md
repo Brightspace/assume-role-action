@@ -1,4 +1,6 @@
-# Assume Role Action
+# ~Assume Role Action~
+
+**DEPRECATED**! Use [the official one](https://github.com/aws-actions/configure-aws-credentials) (via [third-party-actions](https://github.com/Brightspace/third-party-actions) for D2Lers)
 
 This action uses [sts:AssumeRole](https://docs.aws.amazon.com/STS/latest/APIReference/API_AssumeRole.html) to get temporary AWS IAM tokens, installing them as environment variables.
 
